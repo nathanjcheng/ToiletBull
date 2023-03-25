@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:toiletbull/screens/welcome.dart';
 import 'package:toiletbull/screens/map.dart';
+import 'package:toiletbull/toilets/cmc.dart';
+import 'package:toiletbull/toilets/enb.dart';
+import 'package:toiletbull/toilets/eng.dart';
 
 void main() => runApp(ToiletBull());
 
@@ -12,7 +15,9 @@ class ToiletBull extends StatelessWidget {
       routes: {
         WelcomeScreen.id: (context) => WelcomeScreen(),
         MapScreen.id: (context) => MapScreen(),
-        //InfoScreen.id: (context) => InfoScreen(),
+        CMC.id: (context) => CMC(),
+        ENB.id: (context) => ENB(),
+        ENG.id: (context) => ENG(),
       },
     );
   }
