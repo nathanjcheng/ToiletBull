@@ -32,7 +32,7 @@ class _ENG extends State<ENG> with SingleTickerProviderStateMixin {
                     ),
                   ),//(ICON)
                   const Text(
-                    'ENG',
+                    ' at ENG',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
@@ -43,7 +43,7 @@ class _ENG extends State<ENG> with SingleTickerProviderStateMixin {
             ),
             Padding(
               padding: const EdgeInsets.only(bottom: 9.0),
-              child: Image.asset('images/ENA.png',
+              child: Image.asset('images/ENG.png',
                 height: 270,
               ),
             ),
@@ -65,49 +65,65 @@ class _ENG extends State<ENG> with SingleTickerProviderStateMixin {
                       Text('Reviews',
                         style: TextStyle(fontWeight: FontWeight.bold,
                             fontSize: 23),),
-                      Container(
-                        margin: const EdgeInsets.only(top: 12.0),
-                        padding: const EdgeInsets.all(5.0),
-                        width: 400,
-                        height:65,
-                        decoration: BoxDecoration(
-                          border: Border(
-                            top: BorderSide(width: 1.5, color: Colors.black),
-                            bottom: BorderSide(width: 1.5, color: Colors.black),
-                          ),
-                        ),
-                        child:
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Bob gives a  ★★★★★',
-                              style: TextStyle(fontWeight: FontWeight.bold,
-                                  fontSize: 20),),
-                            Text('"Very clean today!',
-                              style: TextStyle(fontWeight: FontWeight.bold,
-                                  fontSize: 20),),
-                          ],
-                        ),  //BOB REVIEW
+                      Column(
+                        children: [
+                          Container(
+                            margin: const EdgeInsets.only(top: 12.0),
+                            padding: const EdgeInsets.all(5.0),
+                            width: 400,
+                            height:65,
+                            decoration: BoxDecoration(
+                              border: Border(
+                                top: BorderSide(width: 1.5, color: Colors.black),
+                                bottom: BorderSide(width: 1.5, color: Colors.black),
+                              ),
+                            ),
+                            child:
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Denny gives a  ★★★★',
+                                  style: TextStyle(fontWeight: FontWeight.bold,
+                                      fontSize: 20),),
+                                Text('"Decent throne, sort of cold"',
+                                  style: TextStyle(fontWeight: FontWeight.bold,
+                                      fontSize: 16),),
+                              ],
+                            ),  //BOB REVIEW
 
+                          ),
+                          Container(
+                            margin: const EdgeInsets.only(top: 12.0),
+                            padding: const EdgeInsets.all(5.0),
+                            width: 400,
+                            height:65,
+                            decoration: BoxDecoration(
+                              border: Border(
+                                bottom: BorderSide(width: 1.5, color: Colors.black),
+                              ),
+                            ),
+                            child:
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Bob gives a  ★★★★★',
+                                  style: TextStyle(fontWeight: FontWeight.bold,
+                                      fontSize: 20),),
+                                Text('"I looked good in this mirror"',
+                                  style: TextStyle(fontWeight: FontWeight.bold,
+                                      fontSize: 16),),
+                              ],
+                            ),  //BOB REVIEW
+
+                          ),
+                        ],
                       )
                     ],
                   ),
-
                 )
             ),
-            /*Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                const Text(
-                  '⭐  ⭐  ⭐  ⭐',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
-                    fontSize: 40,
-                  ),),//(TOILET TITLE)
-              ],
-            ),*/ //THIS IS THE OLD STAR ROW
             Padding(
               padding: EdgeInsets.symmetric(vertical: 4.0),
               child: Material(

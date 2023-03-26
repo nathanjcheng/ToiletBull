@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'game.dart';
 import 'settings.dart';
 import 'mappy.dart';
+import 'package:toiletbull/bird/homepage.dart';
 
 class MapScreen extends StatefulWidget {
   static const String id = 'map_screen';
@@ -13,7 +14,7 @@ class _MapScreenState extends State<MapScreen> {
   int currentIndex = 1;
 
   final screens = [
-    GameScreen(),
+    HomePage(),
     MappyScreen(),
     SettingScreen(),
   ];
@@ -40,7 +41,7 @@ class _MapScreenState extends State<MapScreen> {
           color: Colors.black,
         ),
         elevation: 0,
-        backgroundColor: Colors.green,
+        backgroundColor: Color.fromRGBO(0, 104, 72, 1.0),
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.gamepad),

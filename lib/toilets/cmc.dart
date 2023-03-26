@@ -32,7 +32,7 @@ class _CMC extends State<CMC> with SingleTickerProviderStateMixin {
                     ),
                   ),//(ICON)
                   const Text(
-                    'CMC',
+                    ' at CMC',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
@@ -43,7 +43,7 @@ class _CMC extends State<CMC> with SingleTickerProviderStateMixin {
             ),
             Padding(
               padding: const EdgeInsets.only(bottom: 9.0),
-              child: Image.asset('images/ENA.png',
+              child: Image.asset('images/CMC.png',
                 height: 270,
               ),
             ),
@@ -64,33 +64,63 @@ class _CMC extends State<CMC> with SingleTickerProviderStateMixin {
                   children: [
                     Text('Reviews',
                       style: TextStyle(fontWeight: FontWeight.bold,
-                      fontSize: 23),),
-                    Container(
-                      margin: const EdgeInsets.only(top: 12.0),
-                      padding: const EdgeInsets.all(5.0),
-                      width: 400,
-                      height:65,
-                      decoration: BoxDecoration(
-                        border: Border(
-                          top: BorderSide(width: 1.5, color: Colors.black),
-                          bottom: BorderSide(width: 1.5, color: Colors.black),
-                        ),
-                      ),
-                      child:
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('Bob gives a  ★★★★★',
-                            style: TextStyle(fontWeight: FontWeight.bold,
-                                fontSize: 20),),
-                          Text('"Very clean today!',
-                            style: TextStyle(fontWeight: FontWeight.bold,
-                                fontSize: 20),),
-                        ],
-                      ),  //BOB REVIEW
+                          fontSize: 23),),
+                    Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(top: 12.0),
+                          padding: const EdgeInsets.all(5.0),
+                          width: 400,
+                          height:65,
+                          decoration: BoxDecoration(
+                            border: Border(
+                              top: BorderSide(width: 1.5, color: Colors.black),
+                              bottom: BorderSide(width: 1.5, color: Colors.black),
+                            ),
+                          ),
+                          child:
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('Nathan gives a  ★★★★★',
+                                style: TextStyle(fontWeight: FontWeight.bold,
+                                    fontSize: 20),),
+                              Text('"The best restroom at USF"',
+                                style: TextStyle(fontWeight: FontWeight.bold,
+                                    fontSize: 14),),
+                            ],
+                          ),  //BOB REVIEW
 
+                        ),
+                        Container(
+                          margin: const EdgeInsets.only(top: 12.0),
+                          padding: const EdgeInsets.all(5.0),
+                          width: 400,
+                          height:65,
+                          decoration: BoxDecoration(
+                            border: Border(
+                              bottom: BorderSide(width: 1.5, color: Colors.black),
+                            ),
+                          ),
+                          child:
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('Kevin gives a  ★★★★★',
+                                style: TextStyle(fontWeight: FontWeight.bold,
+                                    fontSize: 20),),
+                              Text('"Highly recommend this throne"',
+                                style: TextStyle(fontWeight: FontWeight.bold,
+                                    fontSize: 14),),
+                            ],
+                          ),  //BOB REVIEW
+
+                        ),
+                      ],
                     )
+
                   ],
                 ),
 

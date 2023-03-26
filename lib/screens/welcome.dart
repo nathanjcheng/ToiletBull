@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'map.dart';
+import 'dart:math' as math;
 
 class WelcomeScreen extends StatefulWidget {
   static const String id = 'welcome_screen';
@@ -8,7 +9,7 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProviderStateMixin {
-
+  late final AnimationController _controller = AnimationController(vsync: this, duration: Duration(seconds: 2))..repeat();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,8 +25,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
                 Hero(
                   tag: 'logo',
                   child: Container(
-                    child: Image.asset('images/bulltoilet.png'),
-                    height: 80,
+                    child: AnimatedBuilder(
+                      animation: _controller,
+                        builder: (_, child) {
+                          return Transform.rotate(angle: _controller.value * 2* math.pi,
+                          child: child,);
+                        },
+                        child: Image.asset('images/bulltoilet.png')),
+                    height: 90,
                   ),
                 ),//(ICON)
                 const Text(
@@ -33,14 +40,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
-                    fontSize: 50,
+                    fontSize: 40,
                 ),),//(TITLE)
               ],
             ),
       Padding(
         padding: EdgeInsets.symmetric(vertical: 16.0),
         child: Material(
-          color: Colors.green,
+          color: Color.fromRGBO(0, 104, 72, 1.0),
           borderRadius: BorderRadius.circular(30.0),
           clipBehavior: Clip.antiAlias,
           child: MaterialButton(

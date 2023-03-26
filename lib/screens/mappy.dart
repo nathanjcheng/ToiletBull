@@ -31,24 +31,38 @@ class MappyScreen extends StatelessWidget {
             fit: BoxFit.fitHeight
           ),
         ),
-        Container(
-          margin:
-          EdgeInsets.only(left:180, top: 292,),
-          width: 30,
-          height: 30,
-          decoration: BoxDecoration(
-              color: Colors.blueAccent,
+        Stack(
+          children: <Widget>[
+            Container(
+            margin:
+            EdgeInsets.only(left:166, top: 278,),
+            width: 60,
+            height: 60,
+            decoration: BoxDecoration(
+              color: Color.fromRGBO(0, 72, 104, 0.3),
               borderRadius: BorderRadius.circular(100),
-              border: Border.all(
-                width: 4,
-                color: Colors.white,
-                style: BorderStyle.solid,
-              ),
+            ),
           ),
-          ), //THE GPS POINTER
+            Container(
+              margin:
+              EdgeInsets.only(left:180, top: 292,),
+              width: 30,
+              height: 30,
+              decoration: BoxDecoration(
+                color: Colors.blueAccent,
+                borderRadius: BorderRadius.circular(100),
+                border: Border.all(
+                  width: 4,
+                  color: Colors.white,
+                  style: BorderStyle.solid,
+                ),
+              ),
+            ),
+          ],
+        ), //THE GPS POINTER
           ToiletButton(x:76, y:143, //ENG
               onTap: () {
-              Navigator.pushNamed(context, WelcomeScreen.id);
+              Navigator.pushNamed(context, ENG.id);
             }),
           ToiletButton(x:188, y:110, //CMC
               onTap: () {

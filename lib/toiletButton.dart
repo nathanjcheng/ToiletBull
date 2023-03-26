@@ -16,9 +16,9 @@ class ToiletButton extends StatelessWidget {
         child: Container(
         margin:
         EdgeInsets.only(left:x, top: y,),
-        width: 45,
-        height: 45,
-        color: Colors.black,
+        width: 70,
+        height: 70,
+        //color: Colors.black,
         child: Image.asset('images/toilet.png',
         ),
     ),
